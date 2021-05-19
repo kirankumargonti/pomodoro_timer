@@ -1,12 +1,12 @@
 # Pomodoro Timer
 
-#### **Live Project: https://kirankumargonti.github.io/pomodoro-timer/**
+#### **Live Project: https://kirankumargonti.github.io/pomodoro_timer/**
 
 <br />
 
 ## Snapshot
 
-[![Snapshot](/src/Assets/snap.png)](https://kirankumargonti.github.io/pomodoro-timer/)
+[![Snapshot](/src/Assets/snap.png)](https://kirankumargonti.github.io/pomodoro_timer/)
 
 ## Quick Start
 
