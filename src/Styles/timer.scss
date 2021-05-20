@@ -1,249 +1,46 @@
-.app {
-  padding-bottom: 50px;
+.timer {
+  padding: 25px 10px;
+  @include displayCenter(center, center);
+  height: auto;
+  //
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   &__container {
-    max-width: 600px;
-    padding: 10px;
-    margin: auto;
-    .app__header {
-      padding: 20px 10px;
-      margin-bottom: 20px;
-      @include displayCenter(center, center);
-      border-bottom: 1px solid rgb(192, 192, 192);
-      .clock__icon {
-        font-size: 25px;
-      }
-      h2 {
-        margin-left: 20px;
-      }
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 6.5rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin: auto;
     }
-    .timer {
-      padding: 25px 10px;
+    .timer__container__buttons {
       @include displayCenter(center, center);
-      height: auto;
-      //
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      &__container {
-        display: flex;
-        flex-direction: column;
-        span {
-          font-size: 6.5rem;
-          letter-spacing: 3px;
-          font-weight: 700;
-          margin: auto;
-        }
-        .timer__container__buttons {
-          @include displayCenter(center, center);
-          margin-top: 20px;
-          button {
-            border: 0;
-            display: inline-block;
-            padding: 15px 55px;
-            font-family: $Open-Sans;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-            cursor: pointer;
-            margin: 0 10px;
-            font-size: 16px;
-            background-color: $primary__color;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-            &:focus {
-              outline: none;
-            }
-            &:hover {
-              box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-            }
-          }
-        }
-      }
-    }
-    .tasks {
-      margin-top: 50px;
-      &__header {
-        @include displayCenter(center, space-between);
-        border-bottom: 1px solid rgb(221, 221, 221);
-        padding-bottom: 20px;
-        .icon__wrapper {
-          @include displayCenter(center, center);
-          cursor: pointer;
-          min-width: 30px;
-          min-height: 30px;
-          background: rgba(255, 255, 255, 0.25);
-          backdrop-filter: blur(4px);
-          border-radius: 50%;
-          border: 1px solid rgba(255, 255, 255, 0.18);
-          &:hover {
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          }
-        }
-      }
-      &__container {
-        padding: 20px 0;
-        .single__task {
-          padding: 15px 10px;
-          margin-bottom: 20px;
-          @include displayCenter(center, space-between);
-          border-radius: 5px;
-          border-left: 5px solid #000;
-          background-color: $primary__color;
-          word-wrap: break-word;
-          &__left {
-            p {
-              color: #292929;
-              font-size: 15px;
-            }
-            .textVisible {
-              color: #686868;
-              text-decoration: line-through;
-            }
-            @include displayCenter(center, center);
-            .check__icon {
-              //   color: #000000;
-              color: #d3d3d3;
-              margin-right: 10px;
-              font-size: 25px;
-              cursor: pointer;
-            }
-            .checkVisible {
-              color: #437ea8;
-            }
-          }
-          &__right {
-            @include displayCenter(center, space-between);
-            width: 65px;
-            .edit__icon,
-            .delete__icon {
-              color: #000000;
-              font-size: 28px;
-              cursor: pointer;
-              border-radius: 5px;
-              background-color: #2b2b2b;
-              color: #ffffff;
-              padding: 5px;
-              &:hover {
-                color: $primary__color;
-                background-color: #000000;
-              }
-            }
-          }
-        }
-      }
-      .add__task {
-        border: 2px dotted $primary__color;
-        @include displayCenter(center, center);
-        border-radius: 5px;
-        padding: 15px 20px;
-        margin-top: 20px;
+      margin-top: 20px;
+      button {
+        border: 0;
+        display: inline-block;
+        padding: 15px 55px;
+        font-family: $Open-Sans;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
         cursor: pointer;
+        margin: 0 10px;
+        font-size: 16px;
+        background-color: $primary__color;
+        border-radius: 5px;
         transition: all 0.3s ease-in-out;
-        background-color: #386485;
+        &:focus {
+          outline: none;
+        }
         &:hover {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
             rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-        }
-        h4 {
-          margin-left: 10px;
-        }
-      }
-    }
-  }
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  visibility: hidden;
-  background-color: rgba(216, 139, 219, 0.466);
-  @include displayCenter(center, center);
-
-  .modal__container {
-    background-color: $primary__color;
-    border-radius: 5px;
-    color: #000;
-    padding: 10px;
-    min-width: 600px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-
-    &__header {
-      @include displayCenter(center, flex-end);
-      .close__icon {
-        cursor: pointer;
-        font-size: 28px;
-        color: rgb(110, 110, 110);
-        &:hover {
-          color: rgb(0, 0, 0);
-        }
-      }
-    }
-    &__content {
-      .input_wrapper {
-        border-radius: 5px;
-        // background: #ffffff;
-        // box-shadow: inset 12px 12px 24px #ffffff, -12px -12px 24px #ffffff;
-        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-          rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-        input {
-          border: 0;
-          width: 100%;
-          font-family: $Open-Sans;
-          padding: 10px;
-          background-color: transparent;
-          font-size: 20px;
-          &:focus {
-            outline: 0;
-          }
-          &::placeholder {
-            font-size: 20px;
-            font-weight: 700;
-          }
-        }
-      }
-      .buttons__container {
-        margin-top: 50px;
-        @include displayCenter(center, flex-end);
-        button {
-          color: $primary__color;
-          border: 0;
-          padding: 8px 15px;
-          font-family: $Open-Sans;
-          cursor: pointer;
-          font-size: 16px;
-          margin: 0 5px;
-          background-color: $primary__color;
-          border-radius: 5px;
-          background-color: #000;
-          &:focus {
-            outline: none;
-          }
-          &:hover {
-            transition: all 0.3s ease-in-out;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-              rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-          }
-        }
-        .btn__one {
-          background-color: transparent !important;
-          color: rgb(59, 59, 59) !important;
-          cursor: pointer;
-          margin-right: 15px;
-          &:hover {
-            box-shadow: none !important;
-          }
-        }
-        .disabled {
-          background-color: rgb(202, 202, 202);
-          cursor: not-allowed;
         }
       }
     }

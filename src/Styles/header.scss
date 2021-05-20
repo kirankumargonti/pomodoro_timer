@@ -1,0 +1,12 @@
+.app__header {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  @include displayCenter(center, center);
+  border-bottom: 1px solid rgb(192, 192, 192);
+  .clock__icon {
+    font-size: 25px;
+  }
+  h2 {
+    margin-left: 20px;
+  }
+}

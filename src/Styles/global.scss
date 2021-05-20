@@ -26,3 +26,12 @@ body {
   background-color: #437ea8;
   color: $primary__color;
 }
+
+.app {
+  padding-bottom: 50px;
+  &__container {
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+  }
+}

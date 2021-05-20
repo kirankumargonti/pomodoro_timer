@@ -12,6 +12,7 @@ const Modal = ({data, submitHandler, updateTaskMessage}) => {
   const task = {
     id: data?.id ? data?.id : uuid(),
     message: taskMessage,
+    isCompleted: data?.isCompleted ? data?.isCompleted : false,
   }
 
   useEffect(() => {
@@ -49,7 +50,13 @@ const Modal = ({data, submitHandler, updateTaskMessage}) => {
               <p className='btn__one' onClick={closeModal}>
                 Cancel
               </p>
-              <button type='submit'>{data?.id ? 'Update' : 'Save'}</button>
+              <button
+                type='submit'
+                className={!taskMessage && 'disabled'}
+                disabled={!taskMessage}
+              >
+                {data?.id ? 'Update' : 'Save'}
+              </button>
             </div>
           </form>
         </div>

@@ -1,0 +1,89 @@
+.tasks {
+  margin-top: 50px;
+  &__header {
+    @include displayCenter(center, space-between);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-bottom: 20px;
+    .icon__wrapper {
+      @include displayCenter(center, center);
+      cursor: pointer;
+      min-width: 30px;
+      min-height: 30px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      &:hover {
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+    }
+  }
+  &__container {
+    padding: 20px 0;
+    .single__task {
+      padding: 15px 10px;
+      margin-bottom: 20px;
+      @include displayCenter(center, space-between);
+      border-radius: 5px;
+      border-left: 5px solid #000;
+      background-color: $primary__color;
+      word-wrap: break-word;
+      &__left {
+        p {
+          color: #292929;
+          font-size: 15px;
+        }
+        .textVisible {
+          color: #686868;
+          text-decoration: line-through;
+        }
+        @include displayCenter(center, center);
+        .check__icon {
+          //   color: #000000;
+          color: #d3d3d3;
+          margin-right: 10px;
+          font-size: 25px;
+          cursor: pointer;
+        }
+        .checkVisible {
+          color: #437ea8;
+        }
+      }
+      &__right {
+        @include displayCenter(center, space-between);
+        width: 65px;
+        .edit__icon,
+        .delete__icon {
+          color: #000000;
+          font-size: 28px;
+          cursor: pointer;
+          border-radius: 5px;
+          background-color: #2b2b2b;
+          color: #ffffff;
+          padding: 5px;
+          &:hover {
+            color: $primary__color;
+            background-color: #000000;
+          }
+        }
+      }
+    }
+  }
+  .add__task {
+    border: 2px dotted $primary__color;
+    @include displayCenter(center, center);
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #386485;
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
+    h4 {
+      margin-left: 10px;
+    }
+  }
+}

@@ -3,18 +3,25 @@ import {FaCheckCircle} from 'react-icons/fa'
 import {RiPencilFill} from 'react-icons/ri'
 import {VscTrash} from 'react-icons/vsc'
 
-const Task = ({task, editTaskIdHandler, removeTaskHandler}) => {
-  const markAsCompleted = () => {
-    const check__btn = document.querySelector('.check__icon')
-    const taskMessage = document.querySelector('.text')
-    check__btn?.classList.toggle('checkVisible')
-    taskMessage?.classList.toggle('textVisible')
-  }
+const Task = ({
+  task,
+  editTaskIdHandler,
+  removeTaskHandler,
+  markAsCompleted,
+}) => {
+
   return (
     <div className='single__task'>
       <div className='single__task__left'>
-        <FaCheckCircle className='check__icon' onClick={markAsCompleted} />
-        <p className='text'>{task?.message}</p>
+        <FaCheckCircle
+          className={
+            task?.isCompleted ? 'check__icon checkVisible' : 'check__icon'
+          }
+          onClick={() => markAsCompleted(task?.id, task?.isCompleted)}
+        />
+        <p className={task?.isCompleted ? 'text textVisible' : 'text'}>
+          {task?.message}
+        </p>
       </div>
       <div className='single__task__right'>
         <RiPencilFill

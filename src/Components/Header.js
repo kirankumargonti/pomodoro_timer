@@ -1,9 +1,9 @@
 import React from 'react'
-import {AiOutlineClockCircle} from 'react-icons/ai'
+import {GiClockwork} from 'react-icons/gi'
 const Header = () => {
   return (
     <div className='app__header'>
-      <AiOutlineClockCircle className='clock__icon' />
+      <GiClockwork className='clock__icon' />
       <h2>Pomodoro Timer</h2>
     </div>
   )
