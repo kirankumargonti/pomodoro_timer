@@ -6,7 +6,7 @@
 
 ## Snapshot
 
-[![Snapshot](/src/Assets/snap.png)](https://kirankumargonti.github.io/pomodoro_timer/)
+[![Snapshot](/src/Assets/snap.jpg)](https://kirankumargonti.github.io/pomodoro_timer/)
 
 ## Quick Start
 

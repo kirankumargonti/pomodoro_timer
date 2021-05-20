@@ -20,6 +20,7 @@
 
     &__header {
       @include displayCenter(center, flex-end);
+      margin-bottom: 30px;
       .close__icon {
         cursor: pointer;
         font-size: 28px;
